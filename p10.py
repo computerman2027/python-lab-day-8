@@ -14,3 +14,16 @@ print(slice)
 
 slice=tuplex[-8:-4]
 print(slice)
+
+
+tuplex=tuple("HELLO WORLD")
+print(tuple)
+
+slice=tuplex[2:9:2]
+print(slice)
+
+slice=tuplex[::4]
+print(slice)
+
+slice=tuplex[9:2:-4]
+print(slice)
