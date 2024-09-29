@@ -18,7 +18,25 @@ def bsearch(l,n):
 
 n=int(input("Enter number of terms : "))
 li=[]
+pos=-1
 for i in range(n):
     temp=int(input("Enter number : "))
     li.append(temp)
 n2=int(input("enter item that need to be searched : "))
+choice=int(input("MENU\n1. Linear search\n2. Binary search\nEnter your choice : "))
+if(choice==1):
+    pos=lsearch(li,n2)
+    if(pos!=-1):
+        print(f"Element found at {pos+1} position")
+    else:
+        print("Element not found")
+elif(choice==2):
+    li.sort()
+    print("Sorted list =",li)
+    pos=bsearch(li,n2)
+    if(pos!=-1):
+        print(f"Element found at {pos+1} position")
+    else:
+        print("Element not found")
+else:
+    print("Invalid input")
